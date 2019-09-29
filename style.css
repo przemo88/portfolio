@@ -1,52 +1,107 @@
-body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
-.jumbotron{
-    margin-top: 1050px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 98vh;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/11/52/coder-1869306_1280.jpg");
-    text-align: center;
+.jumbotron {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 98vh;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/29/11/52/coder-1869306_1280.jpg");
+  text-align: center;
 }
 
-.name{
-   padding-top: 15%;
-   font-weight: bold;
-   font-style: italic;    
-
+.name {
+  padding-top: 15%;
+  font-weight: bold;
+  font-style: italic;
 }
 
-.navbar{
-    width: 100%;
-    position: fixed;
-    z-index: 1;
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
-#about{
-    height: 650px;
-    margin-top: 350px;
+#topheader .navbar-nav li a {
+  color: white;
+  transition: background-color 0.5s;
+  font-size: 18px;
+}
+#topheader .navbar-nav li a:hover, #topheader .navbar-nav li a:focus {
+  text-decoration: none;
 }
 
-#about img{
-    border-radius: 50%;
-    margin-top: 200px;
+.navbar {
+  padding: 0;
+  height: 50px;
+}
+.navbar ul li {
+  width: 95px;
+  height: 50px;
+  padding: 10px;
+}
+.navbar ul li.active {
+  background-color: red;
+  color: white;
+}
+.navbar ul li:hover {
+  background-color: #8b7474;
 }
 
-.description{
-    margin-top: 250px;
-    font-size: 20px;
+.about_title, .portfolio_title {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 100px;
+  font-weight: bold;
 }
 
-.me{
-    margin-top: 250px;
+#about {
+  height: 100vh;
+  background-color: #e4f2ec;
+}
+#about img {
+  border-radius: 50%;
+  margin-top: 100px;
 }
 
-.menu{
-    color:red;
+.description {
+  margin-top: 150px;
+  font-size: 22px;
+  text-align: justify;
 }
+
+.me {
+  margin-top: 250px;
+}
+
+.sample {
+  border: 1px solid black;
+}
+.sample .sample_title {
+  font-weight: bold;
+  text-align: center;
+}
+.sample:nth-child(odd) {
+  margin: 0 5px;
+}
+
+.red_dotted {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+.blue_dotted {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
