@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
@@ -24,7 +25,7 @@ body {
 .navbar {
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 
 #topheader .navbar-nav li a {
@@ -53,7 +54,7 @@ body {
   background-color: #8b7474;
 }
 
-.about_title, .portfolio_title {
+.about_title, .portfolio_title, .kontakt_title {
   text-align: center;
   font-size: 30px;
   padding-top: 100px;
@@ -69,8 +70,11 @@ body {
   margin-top: 100px;
 }
 
-.description {
+.margin_top {
   margin-top: 150px;
+}
+
+.description {
   font-size: 22px;
   text-align: justify;
 }
@@ -79,29 +83,68 @@ body {
   margin-top: 250px;
 }
 
-.sample {
+.website {
   border: 1px solid black;
+  height: 300px;
 }
-.sample .sample_title {
+.website .sample_title {
   font-weight: bold;
   text-align: center;
 }
-.sample:nth-child(odd) {
-  margin: 0 5px;
+.website img {
+  margin-left: 5px;
+  margin-top: 25px;
+}
+.website:hover {
+  background: black;
+}
+.website:hover img {
+  opacity: 0;
+}
+.website:nth-child(odd) {
+  margin-left: 5px;
 }
 
-.red_dotted {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: red;
+.info:hover:after {
+  color: white;
+  position: relative;
+  bottom: 150px;
+  left: 40%;
+  font-size: 25px;
+  content: "więcej...";
 }
 
-.blue_dotted {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: blue;
+.button {
+  margin-top: 50px;
+}
+
+.modal_row {
+  padding: 0 5% 1% 5%;
+}
+
+.fa {
+  font-size: 30px;
+}
+
+#kontakt {
+  background-color: #e4f2ec;
+  height: 700px;
+}
+#kontakt i {
+  margin-left: 15px;
+}
+
+textarea {
+  min-width: 750px;
+  max-width: 750px;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

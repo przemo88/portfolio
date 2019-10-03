@@ -1,7 +1,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-   
 }
 
 .jumbotron{
@@ -26,7 +25,7 @@ body{
  .navbar{
 	 width: 100%;
 	 position: fixed;
-	 z-index: 1;
+	 z-index: 10;
  }
 
 #topheader{
@@ -67,7 +66,7 @@ body{
     }
 }
 
-.about_title, .portfolio_title{
+.about_title, .portfolio_title, .kontakt_title{
     text-align: center; 
     font-size: 30px;
     padding-top: 100px;
@@ -84,9 +83,12 @@ body{
     }
 }
 
+.margin_top{
+    margin-top: 150px;
+}
+
 
 .description{
-    margin-top: 150px;
     font-size: 22px;
     text-align: justify;
 }
@@ -95,30 +97,80 @@ body{
     margin-top: 250px;
 }
 
-.sample{
+.website{
     border: 1px solid black;
+    height: 300px;
+
 
     .sample_title{
         font-weight: bold;
         text-align: center;
     }
 
+   
+    img{
+        margin-left: 5px;
+        margin-top: 25px;
+    }
+
+    &:hover{
+        background: black;
+    
+        img{
+            opacity: 0;
+        }
+
+    }
+
+
     &:nth-child(odd){
-        margin: 0 5px;
+        margin-left: 5px;
+    }
+
+}
+
+.info{
+    &:hover:after{
+        color: white;
+        position: relative;
+        bottom: 150px;
+        left: 40%;
+        font-size: 25px;
+        content: "więcej...";
     }
 }
 
-@mixin dotted($color){
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: $color;
+.button{
+    margin-top: 50px;
 }
 
-.red_dotted{
-   @include dotted(red);
+.modal_row{
+    padding: 0 5% 1% 5%;
 }
 
-.blue_dotted{
-    @include dotted(blue);
- }
+.fa{
+    font-size:30px;
+}
+
+#kontakt{
+    background-color: #e4f2ec;
+    height: 700px;
+
+    i{
+        margin-left: 15px;
+    }
+
+}
+
+textarea{
+    min-width: 750px;
+    max-width: 750px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+}

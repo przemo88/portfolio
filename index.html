@@ -6,6 +6,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
 </head>
@@ -27,18 +29,18 @@
             <p class="display-4">Junior Front-End Developer</p>
         </div>
     </div>
-
     <section id="about">
 
         <div class="row">
             <div class="col-12 about_title">O MNIE</div>
-            <div class="col-2 offset-md-2">
+            <div class="col-2 offset-2">
 
                 <img src="image/przemek.png" alt="przemysław przewoźnik">
             </div>
-            <div class="col-6 description">Interesuję się tworzeniem stron internetowych - głównie we front-endzie.
+            <div class="col-6 description margin_top">
 
-                Przygodę z tworzeniem stron rozpocząłem w liceum.
+                Interesuję się tworzeniem stron internetowych - głównie we
+                front-endzie.Przygodę z tworzeniem stron rozpocząłem w liceum.
                 Na studiach poznawałem informatykę z nieco innej strony (telekomunikacja, systemy operacyjne, bazy
                 danych).Od zeszłego roku postanowiłem skupić się programowaniu.
                 W swojej pracy wykorzystuje takie narzędzia jak: SASS, Bootstrap czy React.
@@ -50,67 +52,227 @@
     <section id="portfolio">
         <div class="row">
             <div class="col-12 portfolio_title">PORTFOLIO</div>
-            <div class="col-4 offset-2 sample" data-toggle="modal" data-target="#landing_page">
+
+            <div class="col-4 offset-md-2 website info margin_top" data-toggle="modal" data-target="#landing_page">
                 <div class="sample_title">LANDING PAGE</div>
 
                 <img src="image/landing_page.png" alt="landing page">
 
-                <div class="modal fade" id="landing_page" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="landing_page" tabindex="-1" role="dialog" aria-labelledby="landing_page"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Landing Page</h5>
+                                <h5 class="modal-title" id="landing_page">Landing Page</h5>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                Strona typu landing page wycięta z szablonu.
+
+                                Responsywna strona typu landing page wycięta z szablonu. Strona ostylowałem
+                                z wykorzystaniem preprocesora SASS.
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12 modal_row">
+                                    <a href="https://github.com/przemo88/landing_page"> <i class="fa fa-github"></a></i>
+                                    <a href="https://przemo88.github.io/landing_page/"> <i class="fa fa-html5"></a></i>
+                                </div>
+
                             </div>
                             <div class="modal-footer">
-                                <div class="blue_dotted"></div>CSS
+
+
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4 sample">
-                <div class="sample_title">DRUGI</div>
+            <div class="col-4 website info margin_top" data-toggle="modal" data-target="#awax">
+                <div class="sample_title">AWAX</div>
+
+                <img src="image/awax.png" alt="awax">
+
+                <div class="modal fade" id="awax" tabindex="-1" role="dialog" aria-labelledby="awax" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="awax">AWAX</h5>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                Responsywna strona typu landing page. Ostylowana za pomocą flexboxa,
+                                z wykorzystaniem preprocesora SASS
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12 modal_row">
+                                    <a href="https://github.com/przemo88/awax/"> <i class="fa fa-github"></a></i>
+                                    <a href="https://przemo88.github.io/awax/"> <i class="fa fa-html5"></a></i>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 offset-2 website info margin_top" data-toggle="modal" data-target="#indywidualny">
+                <div class="sample_title">JUST DO IT</div>
+
+                <img src="image/indywidualny.png" alt="landing page">
+
+                <div class="modal fade" id="indywidualny" tabindex="-1" role="dialog" aria-labelledby="indywidualny"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="indywidualny">AWAX</h5>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                Responsywna strona zbudowana w oparciu o siatkę.
+                                W projekcie korzystałem z preprocesora SASS oraz języka JS.
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12 modal_row">
+                                    <a href="https://github.com/przemo88/projekt_indywidualny"> <i
+                                            class="fa fa-github"></a></i>
+                                    <a href="https://przemo88.github.io/projekt_indywidualny/"> <i
+                                            class="fa fa-html5"></a></i>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 website info margin_top" data-toggle="modal" data-target="#gra">
+                <div class="sample_title">PAPIER KAMIEŃ NOŻYCE</div>
+
+                <img src="image/gra.png" alt="papier kamień nożyce">
+
+                <div class="modal fade" id="gra" tabindex="-1" role="dialog" aria-labelledby="gra" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="gra">PAPIER KAMIEŃ NOŻYCE</h5>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                Gra z komputerem w papier, kamień i nożyce.
+                                W projekcie wykorzystałem JS oraz CSS.
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12 modal_row">
+                                    <a href="https://github.com/przemo88/kamien_papier_nozyce"> <i
+                                            class="fa fa-github"></a></i>
+                                    <a href="https://przemo88.github.io/kamien_papier_nozyce/"> <i
+                                            class="fa fa-html5"></a></i>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4  offset-2 website info margin_top" data-toggle="modal" data-target="#sudoku">
+                <div class="sample_title">SUDOKU</div>
+
+                <img src="image/sudoku.png" alt="SUDOKU">
+
+                <div class="modal fade" id="sudoku" tabindex="-1" role="dialog" aria-labelledby="sudoku"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="sudoku">SUDOKU</h5>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                Popularna gra logiczna - sudoku.
+                                W apliakcji wykorzystałem framework React.
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12 modal_row">
+                                    <a href="https://github.com/przemo88/sudoku"> <i class="fa fa-github"></a></i>
+                                    <a href="https://przemo88.github.io/sudoku/"> <i class="fa fa-html5"></a></i>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="kontakt">
+        <div class="row">
+            <div class="col-12 kontakt_title">KONTAKT</div>
+            <div class="formularz offset-2 col-6">
+
+                <form>
+                    <div class="form-group">
+                        <label for="imie">Imie</label>
+                        <input type="imie" class="form-control" id=imie1" aria-describedby="emailHelp"
+                            placeholder="Wpisz swoje imię">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="wiadomosc">Wpisz wiadomość</label>
+                        <textarea class="form-control" id="wiadomosc" rows="6" cols="10"
+                            placeholder="Wpisz swoją wiadomość"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Wyślij</button>
+                </form>
+
+            </div>
+            <div class="col-3 offset-1">
+                <div>Zobacz także <br />
+                    <a href="https://github.com/przemo88?tab=repositories"> <i class="fa fa-github"></a></i>
+                    <a href="https://www.linkedin.com/in/przemysław-przewoźnik-a57019122/"> <i
+                            class="fa fa-linkedin-square"></a></i>
+                </div>
             </div>
         </div>
-        </div>
+    </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="kontakt">kontakt</div>
+    <footer> Copyright © Przemysław Przewoźnik 2019</footer>
 
 </body>
 
