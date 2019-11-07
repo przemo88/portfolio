@@ -7,7 +7,7 @@ body{
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 98vh;
+    height: 100vh;
     padding: 0;
     margin: 0;
     border-radius: 0;
@@ -33,7 +33,7 @@ body{
         li{
             a{
                 color: white;
-                 transition: background-color 0.5s;
+                transition: background-color 0.5s;
                 font-size: 18px;
 
                 &:hover, &:focus{
@@ -66,11 +66,35 @@ body{
     }
 }
 
-.about_title, .portfolio_title, .kontakt_title{
+@mixin technique{
     text-align: center; 
     font-size: 30px;
-    padding-top: 100px;
     font-weight: bold;
+}
+
+.about_title, .portfolio_title, .contact_title{
+    @include technique;
+    padding-top: 100px;
+}
+
+.technique{
+    @include technique;
+}
+
+.tech{
+    padding-top: 100px;
+    img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+#portfolio{
+    margin-bottom: 150px;
+}
+
+.form-control{
+    width:750px;
 }
 
 #about{
@@ -144,6 +168,16 @@ body{
     margin-top: 50px;
 }
 
+.btn_close{
+    background-color: white;
+    color:black;
+
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+}
+
 .modal_row{
     padding: 0 5% 1% 5%;
 }
@@ -152,7 +186,8 @@ body{
     font-size:30px;
 }
 
-#kontakt{
+#contact{
+    margin-top: 100px;
     background-color: #e4f2ec;
     height: 700px;
 
@@ -169,8 +204,10 @@ textarea{
     max-height: 80px;
 }
 
-footer{
+.footer{
     background: black;
     color: white;
     text-align: center;
 }
+
+
