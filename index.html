@@ -274,23 +274,23 @@
             <div class="col-xl-12 contact_title">KONTAKT</div>
             <div class="offset-2 col-xl-6">
 
-                <form>
+                <form action="contact.php" method="POST">
                     <div class="form-group">
                         <label for="name">Imię</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp"
                             placeholder="Wpisz swoje imię" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" class="form-control" id="email" placeholder="Wpisz swój email" required>
+                        <input type="email" class="form-control" name="email" placeholder="Wpisz swój email" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Wpisz wiadomość</label>
-                        <textarea class="form-control" id="message" rows="6" col-xls="10"
+                        <textarea class="form-control" name="message" rows="6" col-xls="10"
                             placeholder="Wpisz swoją wiadomość" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn_close">Wyślij</button>
+                    <button type="submit" class="btn btn-primary btn_close" name="send">Wyślij</button>
                 </form>
 
             </div>
