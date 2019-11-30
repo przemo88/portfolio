@@ -22,12 +22,6 @@ body{
  
  }
  
- .navbar{
-	 width: 100%;
-	 position: fixed;
-	 z-index: 10;
- }
-
 #topheader{
     .navbar-nav{
         li{
@@ -35,6 +29,9 @@ body{
                 color: white;
                 transition: background-color 0.5s;
                 font-size: 18px;
+                width: 100%;
+                margin: 0;
+                padding: 0;
 
                 &:hover, &:focus{
                     text-decoration: none;
@@ -48,6 +45,9 @@ body{
 .navbar{
     padding: 0;
     height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
 
         ul li{
         width: 95px;
@@ -98,8 +98,9 @@ body{
 }
 
 #about{
-    height: 100vh;
+    width: 100%;
     background-color: #e4f2ec;
+    
 
     img{
     border-radius: 50%;
@@ -113,7 +114,6 @@ body{
 
 
 .description{
-    font-size: 22px;
     text-align: justify;
 }
 
@@ -209,39 +209,42 @@ textarea{
     text-align: center;
 }
 
-@media(max-width: 980px){
-    .jumbotron{
+
+@media only screen and (max-width: 768px){
+
+    body{
         width: 100%;
-        background-repeat: no-repeat;
-        background-size: 125%;
-        height: 790px;
-        background-image: url("https://cdn.pixabay.com/photo/2016/11/29/11/52/coder-1869306_1280.jpg");
-        text-align: center;
-        opacity: 0.8;
     }
 
-    .name{
-        color: blue;
+    .jumbotron{
+        margin-top: 300px;
+        height: 260px;
     }
-    .display-1{
-        font-size: 100px;
+    
+
+    .name{
+        padding-top: 15%;
+        font-weight: bold;
+        font-style: italic;    
+     }
+
+     .display-1{
+        font-size: 30px;
         margin-top: 5vh;
     }
 
+   
     .navbar{
-        padding: 0;
-        height: 45vh;
-        position: relative;
-        
-    
+      
+        height: 300px;
+        width: 100%;
             ul li{
-            height: 200px;
-            width: 50vw;
-            padding: 10px;
+            height: 100px;
+            padding: 5px;
+            width: 100%;
 
             a{
-                font-size: 100px !important;
-                color: green;
+                font-size: 25px !important;
             }
 
             &.active{
@@ -251,91 +254,26 @@ textarea{
         }
     }
     .display-4{
-        font-size: 50px;
-    }
-
-    .about_title, .portfolio_title, .contact_title{
-        @include technique;
-        font-size: 75px;
-    }
-
-    #about{
-        height: 2000px;
-        img{
-            width: 500px;
-        }
-    }
-
-    .description{
-        font-size: 50px;
-    }
-
-    #portfolio{
-        img{
-            width: 100%;
-            height: 500px;
-        }
-    }
-
-    .sample_title{
-        font-size: 50px;
-    }
-
-    .website{
-        height: 500px;
-    }
-
-    #technique{
-        
-       img{
-            width: 50%;
-            height: 50%; 
-            margin-left: 30%;
-        }
-    }
-
-    #contact{
-
-        height: 1300px;
-
-        label{
-            font-size: 80px;
-        }
-        input{
-            height: 80px;
-        }
-        button{
-            margin-top: 20px;
-            height: 100px;
-            width: 150px;
-            font-size: 40px;
-        }
-    }
-
-    .social{
-        margin-top: 50px;
-        text-align: center;
-        font-size: 50px;
-
-        i{
-            font-size: 100px;
-        }
-    }
-
-    .footer{
         font-size: 40px;
     }
     
-    [class^='modal']{
-       font-size: 55px;
-
-       i{
-           font-size: 60px;
-       }
-
-       .btn_close{
-        font-size: 55px;
-       }
+    .margin_top{
+        margin-top: 50px;
     }
+    
+
+    #about{
+        height: 550px;
+        width: 100%;
+    }
+
+   
+
+    .description{
+        font-size: 20px;
+    }
+
+
+  
 
   }
