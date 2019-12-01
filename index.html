@@ -17,39 +17,31 @@
 </head>
 
 <body>
-    <section>
-        <div class="row">
-            <div class="col-xl-12 col-12">
-                <div id="topheader">
-                    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark nav-pills Remove the navbar-expand-lg">
-                        <ul class="nav navbar-nav">
-                            <li class="navbar-link"><a href="#about">O mnie</a></li>
-                            <li class="navbar-link"><a href="#portfolio">Portfolio</a></li>
-                            <li class="navbar-link"><a href="#contact">Kontakt</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <div class="row">
+        <div class="col-xl-12 col-12">
+            <div id="topheader">
+                <nav class="navbar navbar-expand-lg navbar-dark  bg-dark nav-pills Remove the navbar-expand-lg">
+                    <ul class="nav navbar-nav col-sm-offset-2">
+                        <li class="navbar-link"><a href="#about">O mnie</a></li>
+                        <li class="navbar-link"><a href="#portfolio">Portfolio</a></li>
+                        <li class="navbar-link"><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </section>
-
-    <section>
-        <div class="row">
-            <div class="jumbotron col-12">
-                <div class="name">
-                    <h1 class="display-1">Przemysław Przewoźnik</h1>
-                    <p class="display-4">Junior Front-End Developer</p>
-                </div>
-            </div>
+    </div>
+    <div class="jumbotron col-sm-12">
+        <div class="name">
+            <h1 class="display-1">Przemysław Przewoźnik</h1>
+            <p class="display-4">Junior Front-End Developer</p>
         </div>
-    </section>
-
+    </div>
     <section id="about">
 
         <div class="row">
             <h1 class="col-xl-12 about_title">O MNIE</h1>
 
-            <div class="offset-xl-2 col-xl-8 col-12 description margin_top">
+            <div class="offset-xl-2 col-xl-8 description margin_top">
 
                 Interesuję się tworzeniem stron internetowych - głównie we
                 front-endzie.Przygodę z tworzeniem stron rozpocząłem w liceum.
@@ -61,11 +53,11 @@
         </div>
     </section>
 
-    <section id="portfolio container">
+    <section id="portfolio">
         <div class="row">
             <div class="col-xl-12 portfolio_title">PORTFOLIO</div>
 
-            <div class="col-xl-4 offset-xl-2 col-sm-12 website info margin_top col-md-12" data-toggle="modal"
+            <div class="col-xl-4 offset-xl-2 col-12 website info margin_top col-md-12" data-toggle="modal"
                 data-target="#landing_page">
                 <div class="sample_title">LANDING PAGE</div>
 
@@ -232,7 +224,7 @@
                             <div class="modal-body">
 
                                 Popularna gra logiczna - sudoku.
-                                W apliakcji wykorzystałem framework React.
+                                W aplikacji wykorzystałem framework React.
 
                             </div>
                             <div class="row">
@@ -255,7 +247,74 @@
         </div>
     </section>
 
+    <section id="technique container">
+        <div class="row">
+            <div class="col-xl-12 technique sample_title">UŻYWANE NARZĘDZIA</div>
+        </div>
+        <div class="row">
+            <div class="offset-xl-2 tech col-xl-2 col-sm-12">
+                <p class="tech_title">JAVASCRIPT</p>
+                <p class="tech_desc">Obiektowy język porgramowania. Używanydo obsługi zdarzeń (naciśnięcie przycisku,
+                    dodanie/usunięcie
+                    klasy).
+                    Wymagany do pracy z Reacte'm.
+                </p>
+            </div>
+            <div class="tech col-xl-2 col-sm-12">
+                <p class="tech_title">SASS</p>
+                <p class="tech_desc">Preprocesor CSS. Znacznie przyśpiesza pracę z kodem. Dzięki zasadzie DRY redukujemy
+                    ilość kodu.</p>
+            </div>
+            <div class="tech col-xl-2 col-sm-12">
+                <p class="tech_title">REACT</p>
+                <p class="tech_desc">Framework wykorzystywany do tworzneia interfejsów. Szczególnie przydatny podczas
+                    tworzneia
+                    dynamicxznych stron.</p>
+            </div>
+            <div class="tech col-xl-2 col-sm-12">
+                <p class="tech_title">BOOTSTRAP</p>
+                <p class="tech_desc">Biblioteka CSS, zawirające wiele przydatnych narzędzi np. modale, taby</p>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact">
+
+        <div class="row">
+            <div class="col-xl-12 col-sm-2 contact_title">KONTAKT</div>
+            <div class="offset-xl-2 col-xl-12">
+
+                <form action="contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Imię</label>
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp"
+                            placeholder="Wpisz swoje imię" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" name="email" placeholder="Wpisz swój email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Wpisz wiadomość</label>
+                        <textarea class="form-control" name="message" rows="6" col-xls="10"
+                            placeholder="Wpisz swoją wiadomość" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn_close" name="send">Wyślij</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-xl-2 social offset-xl-5 col-12">
+            <div id="see">Zobacz także <br />
+                <a href="https://github.com/przemo88?tab=repositories"> <i class="fa fa-github"></a></i>
+                <a href="https://www.linkedin.com/in/przemysław-przewoźnik-a57019122/"> <i
+                        class="fa fa-linkedin-square"></a></i>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer"> Copyright © Przemysław Przewoźnik 2019</footer>
 
 </body>
 
