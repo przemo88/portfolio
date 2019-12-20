@@ -3,7 +3,6 @@ body{
     overflow-x: hidden;
 }
 
-
 .hidden{
     display: none;
 }
@@ -34,12 +33,14 @@ body{
         z-index: 10;
         width: 100%;
         background-color: #343a40;
+        padding-top: 25px;
 
-        li{
+        li{padding-left: 1%;
             a{
                 color: white;
                 transition: background-color 0.5s;
                 font-size: 18px;
+                
                 
                
                 &:hover, &:focus{
@@ -52,27 +53,6 @@ body{
     }
 }
     
-.navbar{
-    padding: 0;
-    height: 50px;
-
-        ul li{
-        width: 95px;
-        height: 50px;
-        padding: 10px;
-
-        &.active{
-            background-color: red;
-	        color: white
-        }
-    
-        &:hover{
-            background-color:rgb(139, 116, 116);
-        }
-
-    }
-}
-
 @mixin technique{
     text-align: center; 
     font-size: 30px;
@@ -133,7 +113,7 @@ body{
 }
 
 #about{
-    height: 100vh;
+    height: 48rem;
     background-color: #e4f2ec;
 
     img{
@@ -150,6 +130,7 @@ body{
 .description{
     font-size: 22px;
     text-align: justify;
+    padding: 0 5%;
 }
 
 .me{
@@ -212,6 +193,13 @@ body{
     }
 }
 
+.modal_row{
+    padding: 0 5% 1% 5%;
+    i{
+        padding-left: 5%;
+    }
+}
+
 .tech_title{
     text-align: center;
     font-weight: bold;
@@ -223,9 +211,7 @@ body{
     margin-bottom: 60px;
 }
 
-.modal_row{
-    padding: 0 5% 1% 5%;
-}
+
 
 .fa{
     font-size:30px;
@@ -248,7 +234,59 @@ body{
     text-align: center;
 }
 
+
+@media(max-width:768px) and (orientation: landscape){
+   
+    .zero-padding{
+        padding: 0;
+    }
+
+    #topheader{
+        .navbar-nav{
+            position: absolute;
+            width: 100%;
+            background-color: #343a40;
+        }
+    }
+   
+    .navbar-toggler{
+        margin: 5% 0 5% 10%;
+    }
+  
+    .nav-link span{
+      margin-left: 10%;
+  }
+  .display-1{
+      font-size: 2.5em;
+  }
+
+  .display-4{
+      font-size: 2em;
+  }
+
+  .margin_top{
+      margin-top: 50px;
+  }
+
+  img{
+      width: 100%;
+  }
+
+}
+
   @media(max-width: 576px){
+
+    .zero-padding{
+        padding: 0;
+    }
+
+  .navbar-toggler{
+      margin: 0 0 5% 10%;
+  }
+
+  .nav-link span{
+    margin-left: 10%;
+}
 
       .hidden{
           display: block;
@@ -263,7 +301,7 @@ body{
     }
 
     .display-1{
-        font-size: 2em;
+        font-size: 1.7em;
     }
 
     .display-4{
@@ -277,5 +315,68 @@ body{
     img{
         width: 100%;
     }
+
+    
   
+}
+
+@media(max-width: 304px){
+
+    .zero-padding{
+        padding: 0;
+    }
+
+    .description{
+        font-size: 1em;
+    }
+
+    .about_title, .portfolio_title, .contact_title{
+        @include technique;
+        padding-top: 50px;
+    }
+
+    .margin_top{
+        margin-top: 100px;
+    }
+
+    #about{
+        height: 500px;
+    }
+
+    .website{
+        height: 100px;
+        margin-top: 200px;
+    
+        .sample_title{
+            font-weight: bold;
+            text-align: center;
+        }
+    
+       
+        img{
+            margin-left: 5px;
+            margin-top: 25px;
+        }
+    
+        &:hover{
+           
+            height: 200px;
+        
+            img{
+                opacity: 0;
+            }
+    
+        }
+
+        &:nth-child(odd){
+            margin-left: 5px;
+        }
+    
+    }
+
+    .info{
+        &:hover:after{
+            bottom: 100px;
+        }
+    }
 }
