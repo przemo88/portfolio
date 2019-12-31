@@ -69,10 +69,9 @@
     <div class="row">
         <section id="about">
 
-
             <h1 class="col-xl-12 about_title col-12">O MNIE</h1>
 
-            <div class="offset-xl-2 col-xl-8 col-12 description margin_top">
+            <div class="offset-xl-2 col-xl-8 col-12 description mt50">
 
                 Interesuję się tworzeniem stron internetowych - głównie we
                 front-endzie.Przygodę z tworzeniem stron rozpocząłem w liceum.
@@ -89,7 +88,7 @@
 
             <div class="col-xl-12 col-12 portfolio_title">PORTFOLIO</div>
 
-            <div class="website info margin_top col-12 col-xl-4 offset-xl-2" data-toggle="modal"
+            <div class="website info margin_top margin_xl_top col-12 col-xl-4 offset-xl-2 mt50" data-toggle="modal"
                 data-target="#landing_page">
                 <div class="sample_title">LANDING PAGE</div>
 
@@ -126,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div class="website info margin_top col-12 col-xl-4" data-toggle="modal" data-target="#awax">
+            <div class="website info margin_top margin_xl_top col-12 col-xl-4" data-toggle="modal" data-target="#awax">
                 <div class="sample_title">AWAX</div>
 
                 <img src="image/awax.png" alt="awax">
@@ -162,7 +161,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 offset-xl-2 website info margin_top col-md-12" data-toggle="modal"
+            <div class="col-xl-4 offset-xl-2 website info margin_top margin_xl_top col-md-12" data-toggle="modal"
                 data-target="#individual">
                 <div class="sample_title">JUST DO IT</div>
 
@@ -201,7 +200,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 offset-xl-2 website info margin_top col-md-12" data-toggle="modal" data-target="#game">
+            <div class="col-xl-4 offset-xl-2 website info margin_top margin_xl_top col-md-12" data-toggle="modal"
+                data-target="#game">
                 <div class="sample_title">PAPIER KAMIEŃ NOŻYCE</div>
 
                 <img src="image/gra.png" alt="papier kamień nożyce">
@@ -239,7 +239,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 offset-xl-2 website info margin_top col-12 color" data-toggle="modal"
+            <div class="col-xl-4 offset-xl-2 website info margin_top margin_xl_top col-12 color" data-toggle="modal"
                 data-target="#sudoku">
                 <div class="sample_title">SUDOKU</div>
 
@@ -280,74 +280,58 @@
 
 
     <section id="technique">
-        <div class="row bg_color">
+        <div class="row">
             <div class="col-xl-12 technique sample_title">UŻYWANE NARZĘDZIA</div>
         </div>
-        <div class="row bg_color">
-            <div class="offset-xl-2 tech col-xl-2 col-12 blue">
+        <div class="row">
+            <div class="offset-xl-2 tech col-xl-2 col-12 blue margin_top">
                 <p class="tech_title">JAVASCRIPT</p>
-                <p class="tech_desc">Obiektowy język porgramowania. Używany do obsługi zdarzeń (naciśnięcie
+                <p class="tech_desc">Obiektowy język programowania. Używam go do obsługi zdarzeń (naciśnięcie
                     przycisku,
                     dodanie/usunięcie
                     klasy).
                     Wymagany do pracy z Reacte'm.
                 </p>
             </div>
-            <div class="tech col-xl-2 col-12 red">
+            <div class="tech col-xl-2 col-12 red mt0">
                 <p class="tech_title">SASS</p>
-                <p class="tech_desc">Preprocesor CSS. Znacznie przyśpiesza pracę z kodem. Dzięki zasadzie DRY redukujemy
-                    ilość kodu.</p>
+                <p class="tech_desc">Preprocesor CSS. Znacznie przyśpiesza pracę z kodem. Dzięki zasadzie DRY udało mi
+                    się zredukość ilość kodu css o 70%.</p>
             </div>
-            <div class="tech col-xl-2 col-12 yellow">
+            <div class="tech col-xl-2 col-12 yellow mt0">
                 <p class="tech_title">REACT</p>
-                <p class="tech_desc">Framework wykorzystywany do tworzneia interfejsów. Szczególnie przydatny podczas
-                    tworzneia
-                    dynamicznych stron.</p>
+                <p class="tech_desc">Framework wykorzystywany do tworzenia interfejsów. Wykorzystuje go tworząc
+                    dynamiczne strony.</p>
             </div>
-            <div class="tech col-xl-2 col-12 black white">
+            <div class="tech col-xl-2 col-12 black white mt0">
                 <p class="tech_title">BOOTSTRAP</p>
-                <p class="tech_desc">Biblioteka CSS, zawirające wiele przydatnych narzędzi np. modale, taby</p>
+                <p class="tech_desc">Biblioteka CSS, zawierające wiele przydatnych narzędzi np. modale, taby</p>
             </div>
         </div>
     </section>
 
-    <div class="row">
-        <section id="contact" class="col-12">
+    <section id="contact">
+
+        <div class="row">
             <div class="col-12 col-xl-12 contact_title">KONTAKT</div>
-            <div class="offset-xl-2 col-12">
+        </div>
+        <div class="row">
 
-                <form action="contact.php" method="POST">
-                    <div class="form-group">
-                        <label for="name">Imię</label>
-                        <input type="text" class="form-control col-12" name="name" aria-describedby="emailHelp"
-                            placeholder="Wpisz swoje imię" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control col-12" name="email" placeholder="Wpisz swój email"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Wpisz wiadomość</label>
-                        <textarea class="form-control col-12" name="message" placeholder="Wpisz swoją wiadomość"
-                            required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn_close" name="send">Wyślij</button>
-                </form>
+            <div class="col-xl-3 col-sm-4 offset-xl-2 margin_xl_top mt50">
+                <a href="https://github.com/przemo88?tab=repositories"> <i class="fa fa-github"></a></i>
+            </div>
+            <div class="col-xl-3 col-sm-4 margin_xl_top mt50">
+                <a href="https://www.linkedin.com/in/przemysław-przewoźnik-a57019122/"> <i
+                        class="fa fa-linkedin-square"></a></i>
+            </div>
+            <div class="col-xl-3 col-sm-4 margin_xl_top mt50">
+                <a href="mailto:przemyslaw.przewoznik@yahoo.com"> <i class="fa fa-envelope"></i></a></i>
             </div>
 
 
-            <div class="col-xl-2 social offset-xl-5 col-12">
-                <div id="see">Zobacz także <br />
-                    <a href="https://github.com/przemo88?tab=repositories"> <i class="fa fa-github"></a></i>
-                    <a href="https://www.linkedin.com/in/przemysław-przewoźnik-a57019122/"> <i
-                            class="fa fa-linkedin-square"></a></i>
-                </div>
-            </div>
+        </div>
+    </section>
 
-        </section>
-    </div>
 
     <div class="row">
         <footer class="footer col-12"> Copyright © Przemysław Przewoźnik 2019</footer>

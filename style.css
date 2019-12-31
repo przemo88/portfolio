@@ -42,7 +42,7 @@ body {
 
 @keyframes anim {
   0% {
-    margin-top: -270px;
+    margin-top: -200px;
   }
   5% {
     margin-top: -180px;
@@ -63,7 +63,7 @@ body {
     margin-top: 0px;
   }
   100% {
-    margin-top: -270px;
+    margin-top: -200px;
   }
 }
 #topheader .navbar-nav {
@@ -110,6 +110,7 @@ body {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  height: 150px;
   padding-top: 100px;
 }
 
@@ -117,6 +118,7 @@ body {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  height: 150px;
 }
 
 .tech {
@@ -146,7 +148,7 @@ body {
   margin-top: 100px;
 }
 
-.margin_top {
+.margin_xl_top {
   margin-top: 150px;
 }
 
@@ -230,7 +232,8 @@ body {
   height: 700px;
 }
 #contact i {
-  margin-left: 15px;
+  font-size: 150px;
+  padding-left: 15%;
 }
 
 .footer {
@@ -240,6 +243,10 @@ body {
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
+  .name {
+    padding-top: 10%;
+  }
+
   .zero-padding {
     padding: 0;
   }
@@ -266,12 +273,48 @@ body {
     font-size: 2em;
   }
 
-  .margin_top {
+  #about {
+    height: 400px;
+  }
+
+  #portfolio {
     margin-top: 50px;
+  }
+
+  .sample_title {
+    margin-top: 50px !important;
+  }
+
+  .about_title, .portfolio_title, .contact_title {
+    padding-top: 0px !important;
+    height: 0px !important;
+  }
+
+  .mt50 {
+    margin-top: 50px !important;
   }
 
   img {
     width: 100%;
+  }
+
+  #technique {
+    margin-top: 50px !important;
+  }
+  #technique div {
+    margin-top: 0px;
+  }
+
+  #contact {
+    height: 260px;
+  }
+
+  .margin_top {
+    margin-top: 100px !important;
+  }
+
+  .mt0 {
+    margin-top: 0px !important;
   }
 }
 @media (max-width: 576px) {
@@ -326,6 +369,7 @@ body {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+    height: 150px;
     padding-top: 50px;
   }
 

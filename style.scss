@@ -46,14 +46,14 @@ body{
 
 
 @keyframes anim {
-    0% {margin-top:-270px;}
+    0% {margin-top:-200px;}
     5% {margin-top:-180px;}
     33% {margin-top:-180px;}
     38% {margin-top:-90px;}
     66% {margin-top:-90px;}
     71% {margin-top:0px;}
     99.99% {margin-top:0px;}
-    100% {margin-top:-270px;}
+    100% {margin-top:-200px;}
 }
  
 #topheader{
@@ -87,6 +87,7 @@ body{
     text-align: center; 
     font-size: 30px;
     font-weight: bold;
+    height: 150px;
 }
 
 @mixin color($col){
@@ -149,7 +150,7 @@ body{
     }
 }
 
-.margin_top{
+.margin_xl_top{
     margin-top: 150px;
 }
 
@@ -238,8 +239,6 @@ body{
     margin-bottom: 60px;
 }
 
-
-
 .fa{
     font-size:30px;
 }
@@ -249,7 +248,8 @@ body{
     height: 700px;
 
     i{
-        margin-left: 15px;
+        font-size: 150px;
+        padding-left: 15%;
     }
 
 }
@@ -263,6 +263,10 @@ body{
 
 @media(max-width:768px) and (orientation: landscape){
    
+    .name{
+        padding-top: 10%;
+    }
+
     .zero-padding{
         padding: 0;
     }
@@ -273,8 +277,7 @@ body{
             width: 100%;
             background-color: #343a40;
         }
-    }
-   
+    } 
     .navbar-toggler{
         margin: 5% 0 5% 10%;
     }
@@ -282,20 +285,56 @@ body{
     .nav-link span{
       margin-left: 10%;
   }
-  .display-1{
-      font-size: 2.5em;
-  }
+    .display-1{
+        font-size: 2.5em;
+    }
 
-  .display-4{
-      font-size: 2em;
-}
+    .display-4{
+        font-size: 2em;
+    }
+
+    #about{
+        height: 400px;
+    }
+
+    #portfolio{
+        margin-top: 50px;
+    }
+
+    .sample_title{
+        margin-top: 50px !important;
+    }
+
+    .about_title, .portfolio_title, .contact_title{
+        padding-top: 0px !important;
+        height: 0px !important;
+    }
+
+   .mt50{
+       margin-top: 50px !important;
+   }
+
+    img{
+        width: 100%;
+    }
+
+   
+  #technique{
+      margin-top: 50px !important;
+      div{
+          margin-top: 0px;
+      }
+  }
+  #contact{
+      height: 260px;  
+  }
 
   .margin_top{
-      margin-top: 50px;
+      margin-top: 100px !important;
   }
 
-  img{
-      width: 100%;
+  .mt0{
+      margin-top: 0px !important;
   }
 
 }
