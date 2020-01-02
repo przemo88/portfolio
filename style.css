@@ -375,12 +375,28 @@ body {
   }
 
   #contact {
-    height: 550px;
+    height: 300px;
   }
   #contact i {
-    width: 100%;
-    padding-left: 30%;
-    text-align: left;
+    font-size: 30px;
+  }
+
+  .git:after {
+    content: "github.com";
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .link:after {
+    content: "linkedin.com";
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .mail:after {
+    content: "e-mail";
+    font-size: 20px;
+    margin-left: 20px;
   }
 
   .mt0 {
@@ -452,11 +468,28 @@ body {
   }
 
   #contact {
-    height: 350px;
+    height: 300px;
   }
   #contact i {
-    font-size: 75px;
-    padding-left: 40%;
+    font-size: 30px;
+  }
+
+  .git:after {
+    content: "github.com";
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .link:after {
+    content: "linkedin.com";
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .mail:after {
+    content: "e-mail";
+    font-size: 20px;
+    margin-left: 20px;
   }
 }
 

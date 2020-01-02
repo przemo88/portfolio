@@ -400,13 +400,29 @@ body{
     }
 
     #contact{
-        height: 550px;
-
-       i{
-            width: 100%;
-            padding-left: 30%;
-            text-align: left;
+        height: 300px;
+        
+        i{
+            font-size: 30px;
         }
+    }
+
+    @mixin link_logo($link){
+        content: $link;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .git:after{
+       @include link_logo('github.com');
+    }
+
+    .link:after{
+        @include link_logo('linkedin.com');
+    }
+
+    .mail:after{
+        @include link_logo('e-mail');
     }
 
     .mt0{
@@ -416,8 +432,6 @@ body{
 }
 
 @media(max-width: 304px){
-
-   
 
     .name{
         padding-top: 150px;
@@ -491,10 +505,31 @@ body{
     }
 
     #contact{
-        height: 350px;
+        height: 300px;
+        
         i{
-            font-size: 75px;
-            padding-left: 40%;
+            font-size: 30px;
         }
     }
-}
+
+    @mixin link_logo($link){
+        content: $link;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .git:after{
+       @include link_logo('github.com');
+    }
+
+    .link:after{
+        @include link_logo('linkedin.com');
+    }
+
+    .mail:after{
+        @include link_logo('e-mail');
+    }
+      
+    }
+
+
