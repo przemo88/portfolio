@@ -4,6 +4,10 @@ body{
     background-color: #e9ecef;
 }
 
+img{
+    width: 100%;
+}
+
 .hidden{
     display: none;
 }
@@ -125,10 +129,6 @@ body{
 
 .tech{
     padding-top: 100px;
-    img{
-        width: 150px;
-        height: 150px;
-    }
 }
 
 #portfolio{
@@ -173,12 +173,6 @@ body{
     .sample_title{
         font-weight: bold;
         text-align: center;
-    }
-
-   
-    img{
-        margin-left: 5px;
-        margin-top: 25px;
     }
 
     &:hover{
@@ -237,7 +231,7 @@ body{
 .tech_desc{
     text-align: center;
     height: 170px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .fa{
@@ -246,10 +240,10 @@ body{
 
 #contact{
     margin-top: 100px;
-    height: 700px;
+    height: 600px;
 
     i{
-        font-size: 150px;
+        font-size: 100px;
         padding-left: 15%;
     }
 
@@ -283,8 +277,11 @@ body{
         margin: 5% 0 5% 10%;
     }
   
-    .nav-link span{
-      margin-left: 10%;
+    .nav-link
+    { 
+        span{
+            margin-left: 10%;
+        }
   }
     .display-1{
         font-size: 2.5em;
@@ -316,11 +313,6 @@ body{
    .mt50{
        margin-top: 50px !important;
    }
-
-    img{
-        width: 100%;
-    }
-
    
   #technique{
       margin-top: 50px !important;
@@ -342,6 +334,44 @@ body{
 
 }
 
+@media(max-width:1140px){
+    #contact{
+        height: 400px;
+        i{
+            margin-top: -30px;
+        }
+    }
+}
+
+@media(max-width:992px){
+    #contact{
+       height:450px;
+        i{ 
+            font-size: 7rem;
+            margin-top: -20px;
+        }
+    }
+}
+
+@media(max-width:768px){
+    #contact{
+        i{ 
+            font-size: 7rem;
+            padding-top: 80px;
+            
+        }
+    }
+}
+
+@media(max-width:720px){
+      #contact{
+          i{ 
+              font-size: 5rem;
+              padding-top: 80px;
+          }
+      }
+  }
+
   @media(max-width: 576px){
 
     #about{
@@ -362,9 +392,11 @@ body{
       margin: 0 0 5% 10%;
     }
 
-    .nav-link span{
-    margin-left: 10%;
-    }
+    .nav-link{
+        span{
+            margin-left: 10%;
+    } 
+}
 
     .hidden{
           display: block;
@@ -404,7 +436,12 @@ body{
         
         i{
             font-size: 30px;
+            padding: 5%;
         }
+    }
+
+    .icon{
+        padding-top: 40px;
     }
 
     @mixin link_logo($link){
@@ -496,7 +533,7 @@ body{
 
     .info{
         &:hover:after{
-            bottom: 100px;
+            margin-bottom: 50%;
         }
     }
 
@@ -508,7 +545,8 @@ body{
         height: 300px;
         
         i{
-            font-size: 30px;
+            font-size: 20px;
+            padding: 0 10%;
         }
     }
 

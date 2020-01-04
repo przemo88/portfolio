@@ -5,6 +5,10 @@ body {
   background-color: #e9ecef;
 }
 
+img {
+  width: 100%;
+}
+
 .hidden {
   display: none;
 }
@@ -124,10 +128,6 @@ body {
 .tech {
   padding-top: 100px;
 }
-.tech img {
-  width: 150px;
-  height: 150px;
-}
 
 #portfolio {
   margin-bottom: 150px;
@@ -169,10 +169,6 @@ body {
 .website .sample_title {
   font-weight: bold;
   text-align: center;
-}
-.website img {
-  margin-left: 5px;
-  margin-top: 25px;
 }
 .website:hover {
   background: black;
@@ -221,7 +217,7 @@ body {
 .tech_desc {
   text-align: center;
   height: 170px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .fa {
@@ -230,10 +226,10 @@ body {
 
 #contact {
   margin-top: 100px;
-  height: 700px;
+  height: 600px;
 }
 #contact i {
-  font-size: 150px;
+  font-size: 100px;
   padding-left: 15%;
 }
 
@@ -297,10 +293,6 @@ body {
     margin-top: 50px !important;
   }
 
-  img {
-    width: 100%;
-  }
-
   #technique {
     margin-top: 50px !important;
   }
@@ -318,6 +310,35 @@ body {
 
   .mt0 {
     margin-top: 0px !important;
+  }
+}
+@media (max-width: 1140px) {
+  #contact {
+    height: 400px;
+  }
+  #contact i {
+    margin-top: -30px;
+  }
+}
+@media (max-width: 992px) {
+  #contact {
+    height: 450px;
+  }
+  #contact i {
+    font-size: 7rem;
+    margin-top: -20px;
+  }
+}
+@media (max-width: 768px) {
+  #contact i {
+    font-size: 7rem;
+    padding-top: 80px;
+  }
+}
+@media (max-width: 720px) {
+  #contact i {
+    font-size: 5rem;
+    padding-top: 80px;
   }
 }
 @media (max-width: 576px) {
@@ -379,6 +400,11 @@ body {
   }
   #contact i {
     font-size: 30px;
+    padding: 5%;
+  }
+
+  .icon {
+    padding-top: 40px;
   }
 
   .git:after {
@@ -460,7 +486,7 @@ body {
   }
 
   .info:hover:after {
-    bottom: 100px;
+    margin-bottom: 50%;
   }
 
   .contact_title, .portfolio_title {
@@ -471,7 +497,8 @@ body {
     height: 300px;
   }
   #contact i {
-    font-size: 30px;
+    font-size: 20px;
+    padding: 0 10%;
   }
 
   .git:after {
