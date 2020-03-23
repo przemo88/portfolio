@@ -189,7 +189,7 @@ img{
 .info{
         align-items: center; 
         justify-content: center;
-        
+        margin: 0 auto;
         &:hover:after{
         color: white;
         font-size: 25px;
@@ -205,6 +205,7 @@ img{
    &:hover{
     background-image: none;   
     background-color: black;
+    
    }
 }
 
@@ -291,7 +292,6 @@ img{
 
 
 @media(max-width:768px) and (orientation: landscape){
-   
     .name{
         padding-top: 10%;
     }

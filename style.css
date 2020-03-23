@@ -178,6 +178,7 @@ img {
 .info {
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 .info:hover:after {
   color: white;
