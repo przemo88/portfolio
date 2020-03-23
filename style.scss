@@ -175,39 +175,65 @@ img{
 }
 
 .website{
-    height: 300px;
-  
-
+   
     .sample_title{
         font-weight: bold;
         text-align: center;
     }
 
-    &:hover{
-        background: black;
-    
-        img{
-            opacity: 0;
-        }
-
-    }
-
-
     &:nth-child(odd){
         margin-left: 5px;
     }
-
 }
 
 .info{
-    &:hover:after{
+        align-items: center; 
+        justify-content: center;
+        
+        &:hover:after{
         color: white;
-        position: relative;
-        bottom: 150px;
-        left: 40%;
         font-size: 25px;
-        content: "więcej...";
+        content: "kliknij...";
     }
+}
+
+@mixin img_hov($path){
+    display: flex;
+    width: 475px;
+    height: 220px;
+    background-image: url($path);
+   &:hover{
+    background-image: none;   
+    background-color: black;
+   }
+}
+
+.img_hover_lp{
+    @include img_hov("/image/landing_page.png");
+}
+
+.img_hover_awax{
+    @include img_hov("/image/awax.png");
+}
+
+.img_hover_ind{
+    @include img_hov("/image/indywidualny.png");
+}
+
+.img_hover_game{
+    @include img_hov("/image/gra.png");
+}
+
+.img_hover_sudoku{
+    @include img_hov("/image/sudoku.png");
+}
+
+.img_hover_mage{
+    @include img_hov("/image/mage.png");
+}
+
+.img_hover_react_game{
+    @include img_hov("/image/reactGame.png");
 }
 
 .button{
@@ -301,7 +327,6 @@ img{
 
     #about{
         height: 400px;
-        color: red;
         background-image: url("https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557572_1280.jpg");
     }
 
@@ -343,6 +368,7 @@ img{
 }
 
 @media(max-width:1140px){
+    
     #contact{
         height: 400px;
         i{
@@ -372,7 +398,10 @@ img{
 }
 
 @media(max-width:720px){
-      #contact{
+      #about{
+         height: 700px;
+      }
+    #contact{
           i{ 
               font-size: 5rem;
               padding-top: 80px;
@@ -384,7 +413,6 @@ img{
 
     #about{
         margin-top: 280px;
-        color: white;
         background-image: url("https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557572_1280.jpg");
     }
 
