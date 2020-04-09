@@ -226,7 +226,7 @@ img{
 }
 
 .img_hover_sudoku{
-    @include img_hov("/image/sudoku.png");
+    @include img_hov("/image/reactSudoku.png");
 }
 
 .img_hover_mage{
@@ -235,6 +235,10 @@ img{
 
 .img_hover_react_game{
     @include img_hov("/image/reactGame.png");
+}
+
+.img_hover_react_crud{
+    @include img_hov("/image/reactCrud.png");
 }
 
 .button{

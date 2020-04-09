@@ -234,7 +234,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/sudoku.png");
+  background-image: url("/image/reactSudoku.png");
 }
 .img_hover_sudoku:hover {
   background-image: none;
@@ -259,6 +259,17 @@ img {
   background-image: url("/image/reactGame.png");
 }
 .img_hover_react_game:hover {
+  background-image: none;
+  background-color: black;
+}
+
+.img_hover_react_crud {
+  display: flex;
+  width: 475px;
+  height: 220px;
+  background-image: url("/image/reactCrud.png");
+}
+.img_hover_react_crud:hover {
   background-image: none;
   background-color: black;
 }
