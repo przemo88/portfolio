@@ -345,6 +345,12 @@ img {
   resize: none;
 }
 
+@media (max-width: 768px) {
+  #tech {
+    height: 1700px;
+  }
+}
+
 #contact {
   margin-top: 100px;
   height: 600px;
