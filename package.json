@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm-run-all build:*",
     "watch": "npm-run-all -p watch:*",
-    "watch:browsersync": "browser-sync start --server --files *.scss *.html *js",
+    "watch:browsersync": "browser-sync start --server --files *.scss *.html *.js",
     "watch:sass": "sass --watch style.scss style.css"
   },
   "author": "",

@@ -1,15 +1,27 @@
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     overflow-x: hidden;
     background-color: #e9ecef;
 }
 
-img{
-    width: 100%;
+.active{    
+    @media(min-width: 768px){
+        font-size: 25px;
+    }
 }
 
-.hidden{
-    display: none;
+img{
+    width: 100%;
+
+    @media(max-width:768px){
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    @media(min-width: 769px) and (max-width: 1139px){
+        width: 50%;
+        margin-left: 25%;
+    }
 }
 
 .jumbotron{
@@ -23,66 +35,112 @@ img{
     text-align: center;
 }
 
+.title{
+    @media(max-width: 768px){
+        font-size: 30px;
+    }
+}
+
+.jumbotron-text{
+    color: #fff;
+    margin-top: 260px;
+    font-weight: bold;
+    font-size: 40px;
+
+    @media(max-width: 1140px) and (min-width: 769px){
+        margin-top: 60px;
+    }
+
+    @media(max-width: 768px){
+        margin-top: 130px;
+        font-size: 22px;
+    }
+
+    @media(orientation: landscape) and (max-width: 768px){
+       margin-top: 24px;
+    }
+
+}
+
+.link_icon{
+    @media(max-width:768px){
+        width: 20%;
+    }
+}
+
 .name{
 	padding-top: 15%;
 	font-weight: bold;
 	font-style: italic;    
  }
 
-.display-4{ 
-    height: 60px;
-    overflow: hidden;
-    div{
 
-    &:first-child{
-        animation: anim 5s  infinite;
-}
-    div{
-        color: black;
-        height: 45px;
-        margin-bottom: 45px;
-        display:inline-block;
-       
-        
-    }  
-  }
+.nav-link{
+    color: black !important;
 }
 
+.jumbotron{
+    padding: 0;
+    margin: 0;
+    background: url("https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557572_1280.jpg") center center;
+    height: 100vh;
+    background-size: cover; 
 
-@keyframes anim {
-    0% {margin-top:-200px;}
-    5% {margin-top:-180px;}
-    33% {margin-top:-180px;}
-    38% {margin-top:-90px;}
-    66% {margin-top:-90px;}
-    71% {margin-top:0px;}
-    99.99% {margin-top:0px;}
-    100% {margin-top:-200px;}
-}
+    @media(orientation: landscape) and (max-width: 768px){
+        height: 150vh;
+    }
+} 
  
-#topheader{
+.navbar-center{
+    left: 0;
+    text-align: center; 
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(50, 33, 23);
+    z-index: 1000;
+ 
 
-    .navbar-nav{
+    @media(min-width:768px){
         position: fixed;
-        z-index: 10;
-        width: 100%;
-        background-color: #343a40;
-        padding-top: 25px;
+    }
 
-        li{padding-left: 1%;
-            a{
-                color: white;
-                transition: background-color 0.5s;
-                font-size: 18px;
-                
-                
-               
-                &:hover, &:focus{
-                    text-decoration: none;
-                    background-color: red;
-                
-                }
+    li{
+        width: 15%;
+
+        @media(min-width: 768px){
+            &:first-child{
+                margin-left: 20%;
             }
+        }
+        span{
+            color: #fff !important;
+        }
+        
+    }
+}
+
+.bg-light{
+    background-color: rgba(50, 33, 23) !important; 
+    
+    @media(min-width:768px){
+        height: 50px !important;
+    }
+}
+
+.nav-link{
+    padding-top: 25px;
+}
+
+@media(max-width: 1140px){
+    .navbar{
+        padding: 0 !important;
+    }
+
+    ul{
+        width: 100% !important; 
+      
+        li{
+            width: 100% !important;
         }
     }
 }
@@ -94,30 +152,6 @@ img{
     height: 150px;
 }
 
-@mixin color($col){
-    background-color: $col;
-}
-
-.blue{
-    @include color(blue);
-}
-
-.red{
-    @include color(red);
-}
-
-.yellow{
-    @include color(yellow);
-}
-
-.black{
-    @include color(black);
-}
-
-.white{
-    color: white;
-}
-
 .about_title, .portfolio_title, .contact_title{
     @include technique;
     padding-top: 100px;
@@ -127,37 +161,15 @@ img{
     @include technique;
 }
 
-.tech{
-    padding-top: 100px;
+#tech{
+    background-color: #fff;
+    height:600px;
 }
 
 #portfolio{
     margin-bottom: 150px;
 }
 
-.form-control{
-    width:750px;
-}
-
-
-
-#about{
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557572_1280.jpg");
-    opacity: 0.7;
-    img{
-    border-radius: 50%;
-    margin-top: 100px;
-    }
-
-    #about_text{
-        width: 100%;
-        margin-top: 100px;
-        background-color: rgba(224, 208, 208, 0.8);
-    }
-}
 
 .margin_xl_top{
     margin-top: 150px;
@@ -168,10 +180,6 @@ img{
     font-size: 22px;
     text-align: justify;
     padding: 0 5%;
-}
-
-.me{
-    margin-top: 250px;
 }
 
 .website{
@@ -202,11 +210,16 @@ img{
     width: 475px;
     height: 220px;
     background-image: url($path);
+    background-position: center;
    &:hover{
     background-image: none;   
     background-color: black;
     
    }
+}
+
+.img_hover_phototime{
+    @include img_hov("/image/phototime.png");
 }
 
 .img_hover_lp{
@@ -277,6 +290,10 @@ img{
     font-size:30px;
 }
 
+.message{
+    resize: none;
+}
+
 #contact{
     margin-top: 100px;
     height: 600px;
@@ -288,6 +305,44 @@ img{
 
 }
 
+.form-group{
+    input, textarea{
+    border: none;
+    border-radius: 0;
+    background-color: #e9ecef;
+    border-bottom: 1px solid black !important;
+    resize: none;
+    overflow: hidden;
+    }
+
+    textarea{
+        height: 100px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+    
+}
+
+.focused {
+    background: #abcdef !important;
+  }
+
+.button{
+    background-color: rgba(50, 33, 23);
+    color: #fff;
+    border: none;
+}
+
+#status_message{
+    margin-top: 20px;
+
+    @media(max-width:768px){
+        margin-top: 10px;
+    }
+}
+
 .footer{
     background: black;
     color: white;
@@ -295,319 +350,9 @@ img{
 }
 
 
-@media(max-width:768px) and (orientation: landscape){
-    .name{
-        padding-top: 10%;
-    }
 
-    .zero-padding{
-        padding: 0;
-    }
 
-    #topheader{
-        .navbar-nav{
-            position: absolute;
-            width: 100%;
-            background-color: #343a40;
-        }
-    } 
-    .navbar-toggler{
-        margin: 5% 0 5% 10%;
-    }
-  
-    .nav-link
-    { 
-        span{
-            margin-left: 10%;
-        }
-  }
-    .display-1{
-        font-size: 2.5em;
-    }
 
-    .display-4{
-        font-size: 2em;
-    }
 
-    #about{
-        height: 400px;
-        background-image: url("https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557572_1280.jpg");
-    }
-
-    #portfolio{
-        margin-top: 50px;
-    }
-
-    .sample_title{
-        margin-top: 50px !important;
-    }
-
-    .about_title, .portfolio_title, .contact_title{
-        padding-top: 0px !important;
-        height: 0px !important;
-    }
-
-   .mt50{
-       margin-top: 50px !important;
-   }
-   
-  #technique{
-      margin-top: 50px !important;
-      div{
-          margin-top: 0px;
-      }
-  }
-  #contact{
-      height: 260px;  
-  }
-
-  .margin_top{
-      margin-top: 100px !important;
-  }
-
-  .mt0{
-      margin-top: 0px !important;
-  }
-
-}
-
-@media(max-width:1140px){
-    
-    #contact{
-        height: 400px;
-        i{
-            margin-top: -30px;
-        }
-    }
-}
-
-@media(max-width:992px){
-    #contact{
-       height:450px;
-        i{ 
-            font-size: 7rem;
-            margin-top: -20px;
-        }
-    }
-}
-
-@media(max-width:768px){
-    #contact{
-        i{ 
-            font-size: 7rem;
-            padding-top: 80px;
-            
-        }
-    }
-}
-
-@media(max-width:720px){
-      #about{
-         height: 700px;
-      }
-    #contact{
-          i{ 
-              font-size: 5rem;
-              padding-top: 80px;
-          }
-      }
-  }
-
-  @media(max-width: 576px){
-
-    #about{
-        margin-top: 280px;
-        background-image: url("https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557572_1280.jpg");
-    }
-
-     .name{
-        padding-top: 250px;
-    }
-
-    .zero-padding{
-        padding: 0;
-    }
-
-    .navbar-toggler{
-      margin: 0 0 5% 10%;
-    }
-
-    .nav-link{
-        span{
-            margin-left: 10%;
-    } 
-}
-
-    .hidden{
-          display: block;
-      }
-
-      #topheader{
-        .navbar-nav{
-            position: absolute;
-            width: 100%;
-            background-color: #343a40;
-        }
-    }
-
-    .display-1{
-        font-size: 1.7em;
-    }
-
-    .display-4{
-        font-size: 1.5em;
-    }
-
-    .jumbotron{
-        height: 15rem;
-    }
-
-    img{
-        width: 100%;
-    }
-
-    .contact_title{
-        padding-top: 50px;
-        height: 100px;
-    }
-
-    #contact{
-        height: 300px;
-        
-        i{
-            font-size: 30px;
-            padding: 5%;
-        }
-    }
-
-    .icon{
-        padding-top: 40px;
-    }
-
-    @mixin link_logo($link){
-        content: $link;
-        font-size: 20px;
-        margin-left: 20px;
-    }
-
-    .git:after{
-       @include link_logo('github.com');
-    }
-
-    .link:after{
-        @include link_logo('linkedin.com');
-    }
-
-    .mail:after{
-        @include link_logo('e-mail');
-    }
-
-    .mt0{
-        margin-top: 0px !important;
-    }
-  
-}
-
-@media(max-width: 304px){
-
-    .name{
-        padding-top: 150px;
-    }
-
-    .zero-padding{
-        padding: 0;
-    }
-
-    .description{
-        font-size: 1em;
-    }
-
-    .about_title, .portfolio_title, .contact_title{
-        @include technique;
-        padding-top: 50px;
-    }
-
-    #about{
-        color: white;
-        background-image: url("https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557572_1280.jpg");
-    }
-
-    .margin_top{
-        margin-top: 100px;
-    }
-
-    #about{
-        height: 500px;
-    }
-
-    .website{
-        height: 100px;
-        margin-top: 200px;
-    
-        .sample_title{
-            font-weight: bold;
-            text-align: center;
-        }
-    
-       
-        img{
-            margin-left: 5px;
-            margin-top: 25px;
-        }
-    
-        &:hover{
-           
-            height: 200px;
-        
-            img{
-                opacity: 0;
-            }
-    
-        }
-
-        &:nth-child(odd){
-            margin-left: 5px;
-        }
-    
-    }
-
-    .info{
-        &:hover:after{
-            margin-bottom: 50%;
-        }
-    }
-
-    .contact_title, .portfolio_title{
-        height: 100px;
-    }
-
-    #contact{
-        height: 300px;
-        
-        i{
-            font-size: 20px;
-            padding: 0 10%;
-        }
-    }
-
-    @mixin link_logo($link){
-        content: $link;
-        font-size: 20px;
-        margin-left: 20px;
-    }
-
-    .git:after{
-       @include link_logo('github.com');
-    }
-
-    .link:after{
-        @include link_logo('linkedin.com');
-    }
-
-    .mail:after{
-        @include link_logo('e-mail');
-    }
-      
-    }
 
 
