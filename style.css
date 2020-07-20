@@ -306,6 +306,18 @@ img {
   background-color: black;
 }
 
+.img_hover_react_calc {
+  display: flex;
+  width: 475px;
+  height: 220px;
+  background-image: url("/image/reactCalc.png");
+  background-position: center;
+}
+.img_hover_react_calc:hover {
+  background-image: none;
+  background-color: black;
+}
+
 .button {
   margin-top: 50px;
 }
