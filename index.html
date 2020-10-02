@@ -71,7 +71,45 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 contact_title">PORTFOLIO</div>
+                <div class="website margin_top margin_xl_top col-lg-5 col-12 offset-lg-1 mt50" data-toggle="modal"
+                    data-target="#ror_portfolio">
+                    <div class="sample_title">PORTFOLIO</div>
+
+                    <div class="img_hover_portfolio info col-12 col-lg-12"></div>
+
+                    <div class="modal fade" id="ror_portfolio" tabindex="-1" role="dialog"
+                        aria-labelledby="ror_portfolio" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ror_portfolio">Portfolio</h5>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    Strona z portfolio, stworzona za pomocą framerworka Ruby on Rails.
+                                    Baza danych to PostgreSQL.
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12 modal_row">
+                                        <a href="https://github.com/przemo88/rails-portfolio"> <i
+                                                class="fa fa-github"></a></i>
+                                        <a href="https://pp-rails-portfolio.herokuapp.com/"> <i
+                                                class="fa fa-html5"></a></i>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+
+
+                                    <button type="button" class="btn btn-secondary btn_close"
+                                        data-dismiss="modal">Zamknij</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="website margin_top margin_xl_top col-lg-5 col-12 offset-lg-1 mt50" data-toggle="modal"
                     data-target="#phototime">
@@ -478,7 +516,9 @@
                 <div class="col-lg-12 contact_title">KONTAKT</div>
             </div>
 
-            <form id="contact_form" method="post" action="email.php">
+            <form id="contact_form" method="post" action="email.php" onsubmit="return captcha();">
+
+                <div id="g-recaptcha-error"></div>
                 <div class="form-group offset-lg-3 col-lg-6">
                     <label for="name">Imię</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -491,7 +531,8 @@
                     <label for="message">Wiadomość</label>
                     <textarea class="form-control" id="message" name="message" required></textarea>
                 </div>
-                <input type="submit" class="offset-lg-5 col-lg-2 offset-3 col-6 button" value="Wyślij">
+
+                <input type="submit" name="submit" class="offset-lg-5 col-lg-2 offset-3 col-6 button" value="Wyślij">
                 <div class="offset-lg-4 col-lg-8" id="status_message"></div>
             </form>
         </div>
@@ -526,6 +567,8 @@
         });
 
     </script>
+
+
 
     <footer class="footer col-12"> Copyright © Przemysław Przewoźnik 2020</footer>
 

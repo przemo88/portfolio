@@ -218,6 +218,10 @@ img{
    }
 }
 
+.img_hover_portfolio{
+    @include img_hov("/image/rorPortfolio.png");
+}
+
 .img_hover_phototime{
     @include img_hov("/image/phototime.png");
 }

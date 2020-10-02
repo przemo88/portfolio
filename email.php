@@ -22,7 +22,7 @@
         echo "Dziękuję,  twoja wiadomość została wysłana"; 
     } else {
   
-        echo "Nie udało się wysłać twojej wiadomości. Spróbuj ponownie alb użyj linka w sekcji o mnie ";
+        echo "Nie udało się wysłać twojej wiadomości. Spróbuj ponownie albo użyj linka w sekcji o mnie ";
     }
  
 ?>

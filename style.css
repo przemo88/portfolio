@@ -198,6 +198,18 @@ img {
   content: "kliknij...";
 }
 
+.img_hover_portfolio {
+  display: flex;
+  width: 475px;
+  height: 220px;
+  background-image: url("/image/rorPortfolio.png");
+  background-position: center;
+}
+.img_hover_portfolio:hover {
+  background-image: none;
+  background-color: black;
+}
+
 .img_hover_phototime {
   display: flex;
   width: 475px;
