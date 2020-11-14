@@ -12,6 +12,7 @@
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=max-width initial-scale=1" charset="utf-8">
     <script src="script.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
 </head>
@@ -205,8 +206,8 @@
                                 </div>
                                 <div class="modal-body">
 
-                                    Responsywna strona typu landing page. Ostylowana za pomocą flexboxa,
-                                    z wykorzystaniem preprocesora SASS
+                                    Responsywna strona, ostylowana za pomocą flexboxa,
+                                    z wykorzystaniem preprocesora SASS.
 
                                 </div>
                                 <div class="row">
@@ -238,7 +239,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="individual">AWAX</h5>
+                                    <h5 class="modal-title" id="individual">JUST DO IT</h5>
                                     </button>
                                 </div>
                                 <div class="modal-body">
@@ -502,10 +503,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 contact_title">NARZĘDZIA</div>
-                <div class="col-lg-3 margin_xl_top"><img src="image/js.png"></div>
-                <div class="col-lg-3 margin_xl_top"><img src="image/react.png"></div>
-                <div class="col-lg-3 margin_xl_top"><img src="image/bootstrap.png"></div>
-                <div class="col-lg-3 margin_xl_top"><img src="image/sass.png"></div>
+                <div class="col-lg-3 col-md-3 margin_xl_top"><img src="image/js.png"></div>
+                <div class="col-lg-3 col-md-3 margin_xl_top"><img src="image/react.png"></div>
+                <div class="col-lg-3 col-md-3 margin_xl_top"><img src="image/bootstrap.png"></div>
+                <div class="col-lg-3 col-md-3 margin_xl_top"><img src="image/sass.png"></div>
             </div>
         </div>
     </section>
@@ -532,8 +533,11 @@
                     <textarea class="form-control" id="message" name="message" required></textarea>
                 </div>
 
+                <div class="g-recaptcha form-group offset-lg-3 col-lg-6"
+                    data-sitekey="6LeC8-IZAAAAACCHAq63zAsTsBXBXPYcYwgp9id_"></div>
+
                 <input type="submit" name="submit" class="offset-lg-5 col-lg-2 offset-3 col-6 button" value="Wyślij">
-                <div class="offset-lg-4 col-lg-8" id="status_message"></div>
+                <div class="offset-lg-3 col-lg-9" id="status_message"></div>
             </form>
         </div>
 

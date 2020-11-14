@@ -1,5 +1,22 @@
 <?php
 
+    require_once "recaptchalib.php";
+    
+    $secret = "6LeC8-IZAAAAAMrkeH5DXkHF6G0pVFJFjiUIczYj";
+    
+    $response = null;
+ 
+    $reCaptcha = new ReCaptcha($secret);
+
+
+    if ($_POST["g-recaptcha-response"]) {
+        $response = $reCaptcha->verifyResponse(
+        $_SERVER["REMOTE_ADDR"],
+        $_POST["g-recaptcha-response"]
+    );
+}
+
+
     $name = htmlspecialchars(stripslashes(trim($_POST['name'])));
 
     $email = filter_var(htmlspecialchars(stripslashes(trim($_POST["email"])), FILTER_SANITIZE_EMAIL));
@@ -16,13 +33,11 @@
     
     $email_headers = "Od: $email";
     
-    $send_email = mail($my_email, $subject, $email_content, $email_headers);
+    if ($response != null && $response->success) {
+        $send_email = mail($my_email, $subject, $email_content, $email_headers);
+        echo "Dziękuję, twoja wiadomość została wysłana. Wkrótce odpowiem."; 
+      } else {
     
-    if($send_email){ 
-        echo "Dziękuję,  twoja wiadomość została wysłana"; 
-    } else {
-  
-        echo "Nie udało się wysłać twojej wiadomości. Spróbuj ponownie albo użyj linka w sekcji o mnie ";
-    }
- 
+        echo  "Nie udało się wysłać twojej wiadomości. Sprawdź czy zaznaczyłeś captcha.";
+      } 
 ?>
