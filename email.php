@@ -2,7 +2,7 @@
 
     require_once "recaptchalib.php";
     
-    $secret = "6LeC8-IZAAAAAMrkeH5DXkHF6G0pVFJFjiUIczYj";
+ 
     
     $response = null;
  
