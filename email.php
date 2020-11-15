@@ -1,9 +1,15 @@
 <?php 
 
+
 require_once "recaptchalib.php";
 require_once "env.php";
 
     $secret = $_ENV['secret'];
+
+    require_once "recaptchalib.php";
+    
+ 
+
     
     $response = null;
  
