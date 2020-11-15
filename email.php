@@ -1,8 +1,9 @@
-<?php
+<?php 
 
-    require_once "recaptchalib.php";
-    
-    $secret = "6LeC8-IZAAAAAMrkeH5DXkHF6G0pVFJFjiUIczYj";
+require_once "recaptchalib.php";
+require_once "env.php";
+
+    $secret = $_ENV['secret'];
     
     $response = null;
  
@@ -35,7 +36,7 @@
     
     if ($response != null && $response->success) {
         $send_email = mail($my_email, $subject, $email_content, $email_headers);
-        echo "Dziękuję, twoja wiadomość została wysłana. Wkrótce odpowiem."; 
+        echo 'Dziękuję, twoja wiadomość została wysłana. Wkrótce odpowiem.'; 
       } else {
     
         echo  "Nie udało się wysłać twojej wiadomości. Sprawdź czy zaznaczyłeś captcha.";

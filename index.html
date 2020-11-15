@@ -517,7 +517,7 @@
                 <div class="col-lg-12 contact_title">KONTAKT</div>
             </div>
 
-            <form id="contact_form" method="post" action="email.php" onsubmit="return captcha();">
+            <form id="contact_form" method="post" action="email.php">
 
                 <div id="g-recaptcha-error"></div>
                 <div class="form-group offset-lg-3 col-lg-6">
@@ -534,12 +534,13 @@
                 </div>
 
                 <div class="g-recaptcha form-group offset-lg-3 col-lg-6"
-                    data-sitekey="6LeC8-IZAAAAACCHAq63zAsTsBXBXPYcYwgp9id_"></div>
+                    data-sitekey="6LehQeMZAAAAAHA0cAiDnsiG9IuoyDs9-K5etMpj"></div>
 
                 <input type="submit" name="submit" class="offset-lg-5 col-lg-2 offset-3 col-6 button" value="Wyślij">
-                <div class="offset-lg-3 col-lg-9" id="status_message"></div>
+
             </form>
         </div>
+        <div class="col-12" id="status_message"></div>
 
     </section>
 
@@ -560,14 +561,10 @@
             });
 
             the_request.done(function (data) {
-                form_messages.text("Status: " + data);
-
+                form_messages.text(data);
+                form_messages.addClass("alert alert-primary text-center");
             });
 
-            the_request.done(function () {
-                form_messages.text("Status: " + data);
-
-            });
         });
 
     </script>

@@ -419,17 +419,18 @@ img {
   border: none;
 }
 
-#status_message {
-  margin-top: 20px;
-}
 @media (max-width: 768px) {
   #status_message {
     margin-top: 10px;
   }
 }
 
+.message {
+  color: red;
+}
+
 .footer {
-  margin-top: 100px;
+  margin-top: 120px;
   background: black;
   color: white;
   text-align: center;
