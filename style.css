@@ -51,7 +51,8 @@ img {
 }
 @media (max-width: 1140px) and (min-width: 769px) {
   .jumbotron-text {
-    margin-top: 60px;
+    margin-top: 160px;
+    color: #fff;
   }
 }
 @media (max-width: 768px) {
@@ -62,10 +63,19 @@ img {
 }
 @media (orientation: landscape) and (max-width: 768px) {
   .jumbotron-text {
-    margin-top: 24px;
+    margin-top: 80px;
   }
 }
 
+.link_icon {
+  font-size: 50px !important;
+  width: 30%;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .link_icon {
+    width: 20%;
+  }
+}
 @media (max-width: 768px) {
   .link_icon {
     width: 20%;
@@ -162,12 +172,23 @@ img {
 
 #tech {
   background-color: #fff;
-  height: 600px;
+  height: 500px;
+  text-align: center;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
   #tech {
-    height: 400px;
+    height: 300px !important;
   }
+}
+@media (max-width: 768px) {
+  #tech {
+    height: 1000px !important;
+  }
+}
+
+.tech_icon {
+  font-size: 150px !important;
+  margin-top: 50px;
 }
 
 #portfolio {
@@ -175,7 +196,7 @@ img {
 }
 
 .margin_xl_top {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .margin_xl_top {
