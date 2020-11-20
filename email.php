@@ -8,9 +8,6 @@ require_once "env.php";
 
     require_once "recaptchalib.php";
     
- 
-
-    
     $response = null;
  
     $reCaptcha = new ReCaptcha($secret);
@@ -24,12 +21,35 @@ require_once "env.php";
 }
 
 
-    $name = htmlspecialchars(stripslashes(trim($_POST['name'])));
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 
-    $email = filter_var(htmlspecialchars(stripslashes(trim($_POST["email"])), FILTER_SANITIZE_EMAIL));
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 
-    $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+    if(empty($name)){
+      $errors[] = "Imię";
+    }
     
+    if(empty($email)){
+      $errors[] = "Email";
+    }
+
+    if(empty($message)){
+      $errors[] = "Wiadomość";
+    }
+
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $output = json_encode(array('type'=>'error', 'text' => 'Błędny adres email.'));
+          die($output);
+    }
+
+    if(!empty($errors)) {
+      $output = json_encode(array('type'=>'error', 'text' =>'Uzupełnij pola: ' . implode(", ",$errors)));
+          die($output);
+    }
+    
+
     $my_email = "kontakt@przemyslawprzewoznik.pl";
   
     $subject = "Wiadomość od $name wysłana przez formularz kontaktowy.";
@@ -41,10 +61,13 @@ require_once "env.php";
     $email_headers = "Od: $email";
     
     if ($response != null && $response->success) {
-        $send_email = mail($my_email, $subject, $email_content, $email_headers);
-        echo 'Dziękuję, twoja wiadomość została wysłana. Wkrótce odpowiem.'; 
+        mail($my_email, $subject, $email_content, $email_headers);
+        $result = json_encode(array('type' => 'success', 'text' => 'Dziękuję, twoja wiadomość została wysłana.',
+      'class' => 'alert alert-success text-center'));
+        die($result); 
       } else {
-    
-        echo  "Nie udało się wysłać twojej wiadomości. Sprawdź czy zaznaczyłeś captcha.";
+        $result = json_encode(array('type' => 'error', 'text' => 'Błąd -  Sprawdź czy zaznaczyłeś captcha.',
+        'class' => 'alert alert-danger text-center'));
+        die($result); 
       } 
 ?>

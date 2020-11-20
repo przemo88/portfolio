@@ -517,20 +517,20 @@
                 <div class="col-lg-12 contact_title">KONTAKT</div>
             </div>
 
-            <form id="contact_form" method="post" action="email.php">
+            <form id="contact_form" method="post">
 
                 <div id="g-recaptcha-error"></div>
                 <div class="form-group offset-lg-3 col-lg-6">
                     <label for="name">Imię</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="form-group offset-lg-3 col-lg-6">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group offset-lg-3 col-lg-6">
                     <label for="message">Wiadomość</label>
-                    <textarea class="form-control" id="message" name="message" required></textarea>
+                    <textarea class="form-control" id="message" name="message"></textarea>
                 </div>
 
                 <div class="g-recaptcha form-group offset-lg-3 col-lg-6"
@@ -541,28 +541,45 @@
             </form>
         </div>
         <div class="col-12" id="status_message"></div>
-
+        <footer class="footer col-12"> Copyright © Przemysław Przewoźnik 2020</footer>
     </section>
 
     <script>
 
-        var form = $('#contact_form'),
-            form_messages = $('#status_message');
+        var contact = $('#contact_form'),
+            form_messages = $('#status_message').hide();
+        btn = $('.button');
 
-        $(form).on('submit', function (e) {
+        contact.on('submit', function (e) {
             e.preventDefault();
 
-            var form_data = $(form).serialize();
 
-            var the_request = $.ajax({
+            $.ajax({
                 type: 'POST',
                 url: "email.php",
-                data: form_data
-            });
+                dataType: "json",
+                data: {
+                    "name": $('input[name="name"]').val(),
+                    "email": $('input[name="email"]').val(),
+                    "message": $('textarea[name="message"]').val(),
+                    "g-recaptcha-response": $('textarea[id="g-recaptcha-response"]').val()
+                },
 
-            the_request.done(function (data) {
-                form_messages.text(data);
-                form_messages.addClass("alert alert-primary text-center");
+                success: function (response) {
+                    if (response.type == "success") {
+                        form_messages.removeClass('alert-danger');
+                        form_messages.addClass('alert alert-success text-center');
+                    }
+                    else if (response.type == "error") {
+                        form_messages.addClass('alert alert-danger text-center');
+                    }
+                    form_messages.show();
+                    form_messages.html(response.text);
+                },
+
+                error: function (response) {
+                }
+
             });
 
         });
@@ -571,7 +588,7 @@
 
 
 
-    <footer class="footer col-12"> Copyright © Przemysław Przewoźnik 2020</footer>
+
 
 </body>
 
