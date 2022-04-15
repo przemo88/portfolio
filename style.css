@@ -233,7 +233,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/rorPortfolio.png");
+  background-image: url("portfolio/image/rorPortfolio.png");
   background-position: center;
 }
 .img_hover_portfolio:hover {
