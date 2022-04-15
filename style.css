@@ -233,7 +233,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/rorPortfolio.png");
+  background-image: url("image/rorPortfolio.png");
   background-position: center;
 }
 .img_hover_portfolio:hover {
@@ -245,7 +245,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/phototime.png");
+  background-image: url("image/phototime.png");
   background-position: center;
 }
 .img_hover_phototime:hover {
@@ -257,7 +257,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/landing_page.png");
+  background-image: url("image/landing_page.png");
   background-position: center;
 }
 .img_hover_lp:hover {
@@ -269,7 +269,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/awax.png");
+  background-image: url("image/awax.png");
   background-position: center;
 }
 .img_hover_awax:hover {
@@ -281,7 +281,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/indywidualny.png");
+  background-image: url("image/indywidualny.png");
   background-position: center;
 }
 .img_hover_ind:hover {
@@ -293,7 +293,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/gra.png");
+  background-image: url("image/gra.png");
   background-position: center;
 }
 .img_hover_game:hover {
@@ -305,7 +305,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/reactSudoku.png");
+  background-image: url("image/reactSudoku.png");
   background-position: center;
 }
 .img_hover_sudoku:hover {
@@ -317,7 +317,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/mage.png");
+  background-image: url("image/mage.png");
   background-position: center;
 }
 .img_hover_mage:hover {
@@ -329,7 +329,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/reactGame.png");
+  background-image: url("image/reactGame.png");
   background-position: center;
 }
 .img_hover_react_game:hover {
@@ -341,7 +341,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/reactCrud.png");
+  background-image: url("image/reactCrud.png");
   background-position: center;
 }
 .img_hover_react_crud:hover {
@@ -353,7 +353,7 @@ img {
   display: flex;
   width: 475px;
   height: 220px;
-  background-image: url("/image/reactCalc.png");
+  background-image: url("image/reactCalc.png");
   background-position: center;
 }
 .img_hover_react_calc:hover {
